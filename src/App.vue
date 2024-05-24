@@ -191,6 +191,7 @@ onMounted(() => {
         if (data.textures[data.selected_texture] !== null) {
             data.materials[data.filter].setTexture('image', data.textures[data.selected_texture]);
         }
+        data.materials[data.filter].setFloat('time', performance.now() * 0.001);
     });
 
     // Render every frame
